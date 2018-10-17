@@ -123,7 +123,15 @@ function load_q(){
 
   $q_no =get_current_q();
   $link = connect_to_database();
-  $query = "SELECT * FROM `questions` WHERE id = '$q_no'";
+  $query = "";
+  if($q_no == 1){
+    $query = "SELECT * FROM `questions` WHERE id = '$q_no'";
+  }
+  else{
+    $set = get_set();
+    $query = "SELECT * FROM `questions` WHERE id = '$q_no' AND s = '$set'";
+  }
+
   $result = mysqli_query($link,$query);
   if($result){
     $row = mysqli_fetch_assoc($result);
@@ -150,7 +158,7 @@ function get_q(){
         die("Error Connecting.. please try again!");
     }
 
-    else if($qno>1){
+    else if($qno!=1){
         $set = get_set();
         $link = connect_to_database();
         $query = "SELECT * FROM `questions` WHERE id = '$qno' and s = '$set'";
