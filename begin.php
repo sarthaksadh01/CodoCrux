@@ -69,7 +69,7 @@ else{
     <div class="row">
       <div class="col-md-12 text-center">
 
-        <h2 class="byline mt-5 ankit" id="byline">CRYPTX</h2>
+        <h2 class="byline mt-5 ankit" id="byline">Codocru<bold style="color:red;">X</bold></h2>
       </div>
 
 

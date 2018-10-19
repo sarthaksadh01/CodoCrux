@@ -6,7 +6,8 @@
 body {
   margin: 30px;
   padding: 40px;
-  background:#221B22;
+  background:#e6f7ff;
+  color:black;
   /*height:700px;*/
   /*width:1200px;*/
   overflow-x: hidden;
@@ -97,7 +98,7 @@ body {
 }
 
 @media only screen and (max-width: 400px) {
-  
+
     .signupSection{
         transform:translate(-35%,-30%);
         width:500px;
@@ -108,11 +109,11 @@ body {
         height:100%;
         width:100%;
     }
-    
+
 }
 
 @media only screen and (max-width: 560px) {
-  
+
     .signupSection{
         transform:translate(-35%,-30%);
         width:500px;
@@ -123,7 +124,7 @@ body {
         height:100%;
         width:100%;
     }
-    
+
 }
 
 #al{
@@ -281,5 +282,3 @@ cursor:pointer;
 
 
 /*ends*/
-
-

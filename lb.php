@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <title>Infox | Cryptx LeaderBoard</title>
+    <title>Infox | CodocruX LeaderBoard</title>
     <?php include("frontend/seo.php");?>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -215,7 +215,7 @@
 
 
 @media only screen and (max-width: 400px) {
- 
+
  #abcd{
      /*color:#000;*/
      display:none;
@@ -225,9 +225,9 @@
 
 </head>
 <body>
-<h1 class="text-center">"Cryptx-Leaderboard"</h1><br>
+<h1 class="text-center">"Codocru<bold style="color:red">X</bold>-Leaderboard"</h1><br>
 
-<h2 class="text-center ">Unlock your Sherlock</h2>
+<h2 class="text-center ">Crux to Code</h2>
 
 
 
@@ -278,8 +278,8 @@
 
 
  ?>
-    
-  
+
+
 
 
 

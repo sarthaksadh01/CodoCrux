@@ -12,15 +12,15 @@ if(isset($_SESSION['email'])){
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <?php include("frontend/seo.php");?>
-  
+
 <link rel="stylesheet" href="frontend/css/login.css">
 <script src="https://codepen.io/fbrz/pen/9a3e4ee2ef6dfd479ad33a2c85146fc1.js"></script>
 <script src="frontend/js/jquery.js"></script>
 <script src = "frontend/js/login.js"></script>
-<title>Infox | Cryptx-login</title>
+<title>Infox | CodoCrux-login</title>
 <style>
     .info{
-        background: url(sherlock.jpg);
+        background: url(code.png);
     }
 </style>
 </head>
@@ -37,26 +37,27 @@ if(isset($_SESSION['email'])){
 <div class="signupSection"  id="signup"  >
 
 
-  <div class="info" >
-    <h1><strong ><bold>CRYPTX</bold></strong></h2>
-    <h4>Oct 16, 2018 | 9PM-12AM</h4>
+  <div class="info" style="color:black;">
+    <h1><strong ><bold>CodoCru<bold style="color:red;">X</bold></bold></strong></h2>
+    <h4>Oct 26, 2018 | 9PM-12AM</h4>
 
 
-    <p id="crypt" style="text-align:center;font-size:20px;padding-top:50px;">
+    <p id="crypt" style="text-align:center;font-size:20px;padding-top:50px;color:black">
         Think you are a high functioning sociopath!!!
         <br><br>
-        It's time to Unlock Your Sherlock. Let the detective instincts creep through your brains. Trail the footprints.Get to your Mind Palace and unravel the great mysteries.
-        <br><br>
+        It's a challenge designed to inspire the dynamic millenials to put their logical and technical skills to test.
+        The event begins with a crossword followed by coding an quiz rounds.Come join us in this mystifying experience.
+        <br>
         <h2><bold>GOOD LUCK!</bold></h2>
 
 </p>
   </div>
-  <form   style="background:#221B22" class="signupForm" name="signupform">
-    <h2>Sign Up</h2>
+  <form   style="background:#e6f7ff;color:black;" class="signupForm" name="signupform">
+    <h1 style="font-size:35px;"><bold>Sign Up</bold></h1>
     <ul class="noBullet">
       <li>
         <label for="username"></label>
-        <input type="text" class="inputFields" id="name" name="username" placeholder="Name *" value="" />
+        <input type="text" class="inputFields" id="name" name="username" style="color:black;" placeholder="Name *" value="" />
       </li>
       <li>
         <label for="email"></label>
@@ -98,28 +99,25 @@ if(isset($_SESSION['email'])){
 
 
     </ul>
-    <h4 id="al" onclick="login();">Already joined! login here</h4>
-    <a href="team.php" target="_blank" style="color:#fff;"><strong>For any queries Click here!</strong></a><br><br>
-     <a href="https://infoxpression.in/" target="_blank" style="color:#fff;">*INFOXPRESSION 2018</a>
+    <h4 id="al" onclick="login();" style="color:black;">Already joined! login here</h4>
+    <a href="team.php" target="_blank" style="color:black;"><strong>For any queries Click here!</strong></a><br><br>
+     <a href="https://infoxpression.in/" target="_blank" style="color:black;">*INFOXPRESSION 2018</a>
      <br><br>
-    <a href="https://www.facebook.com/infoxpression/" target="_blank" style="color:#fff;">* LIKE OUR PAGE FOR UPDATES </a>
+    <a href="https://www.facebook.com/infoxpression/" target="_blank" style="color:black;">* LIKE OUR PAGE FOR UPDATES </a>
   </form>
 </div>
-<div class="signupSection" style="display:none;" id="login" >
+<div class="signupSection" style="display:none;color:black;" id="login" >
 
 <div class="info">
-<h2>Cryptx-Rules!</h2>
+<h2>Codocrux-Rules!</h2>
     <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
     <p style="text-align:left">
 
-•	The contest comprises of 10 questions in total. The duration of the contest is 3 hours.<br><br>
-•	The participants can move to the next question only if they have answered the current question correctly.<br><br>
-•	The participant can use ‘Candy’ to skip any one question. Candy can be used only once during the whole contest. <br><br>
-•	Leaderboard rankings will be decided based on the time taken by the participants to complete the contest.<br>
+
 </p>
   </div>
 
-<form action="#" method="POST"  style="background:#221B22" class="signupForm" name="signupform">
+<form action="#" method="POST"  style="background:#e6f7ff;color:black;" class="signupForm" name="signupform">
     <br><br>
     <h2>Login here</h2>
     <br><br>
@@ -139,13 +137,13 @@ if(isset($_SESSION['email'])){
        <h5 class="loading" type="" style="width:30px;" id="join-btn" name="join" alt="Join" value=""><img src="Rolling-1s-28px.gif"></h5>
       </li>
     </ul>
-    <h4 id="al" onclick="signup()">Want to join! Click here</h4>
-     <a href="team.php" target="_blank" style="color:#fff;"><strong>For any queries Click here!</strong></a>
+    <h4 id="al" onclick="signup()"style="color:black">Want to join! Click here</h4>
+     <a href="team.php" target="_blank" style="color:black;"><strong>For any queries Click here!</strong></a>
 <br><br>
-    <a href="https://infoxpression.in/" target="_blank" style="color:#fff;">*INFOXPRESSION 2018</a><br><br>
-    <a href="https://www.facebook.com/infoxpression/" target="_blank" style="color:#fff;">* LIKE OUR PAGE FOR UPDATES </a>
+    <a href="https://infoxpression.in/" target="_blank" style="color:black;">*INFOXPRESSION 2018</a><br><br>
+    <a href="https://www.facebook.com/infoxpression/" target="_blank" style="color:black;">* LIKE OUR PAGE FOR UPDATES </a>
 
-  </form
+  </form>
 
 </div>
 

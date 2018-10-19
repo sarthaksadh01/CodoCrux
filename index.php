@@ -63,7 +63,7 @@ else{
   <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Infox | Cryptx</title>
+  <title>Infox | CodoCrux</title>
   <?php include("frontend/seo.php");?>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="frontend/js/jquery.js"></script>
@@ -130,29 +130,25 @@ else{
     <br /><br><br>
     <div class="row justify-content-center">
       <div class="col-12 col-md-10 col-lg-8">
-        <form class="card card-sm" method="post">
+        <form class="border border-warning rounded-circle card card-sm" method="post">
           <div class="card-body row no-gutters align-items-center">
             <div class="col-auto">
               <!-- <i class="fas fa-link h4 text-body"></i> -->
             </div>
             <!--end of col-->
             <div class="col">
-              <input id="ans" value="" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Enter answer here!" name="url">
+              <input id="ans" style="border" value="" class=" form-control form-control-lg form-control-borderless rounded-circle" type="search" placeholder="Enter answer here!" name="url">
             </div>
             <div id="image" style="display:none;">
-              <img id="qimage" style="height:300px; width:300px;">
+              <img id="qimage" style="height:300px; width:300px;border-radius: 2rem;">
             </div>
 
             <!--end of col-->
             <div class="col-auto">
               <!-- <button  name = "submit"  type="submit">Submit</button> -->
-              <h5 id="button1" onclick="atmpt()" class="btn btn-lg  " style=" color:green; font-size:20px;">SUBMIT</h5>
-              <img style="display:none; height:45px; width:45px;" src="http://preloaders.net/preloaders/290/preview.gif" id="ajax-loader" />
+              <h5 id="button1" onclick="atmpt()" class="btn btn-lg  " style=" color:#00004d; font-size:20px;border-radius: 2rem;">SUBMIT</h5>
+              <img style="display:none; height:45px; width:45px;border-radius: 2rem;" src="http://preloaders.net/preloaders/290/preview.gif" id="ajax-loader" />
               <div id="preload"></div>
-
-
-
-
 
             </div>
             <!--end of col-->
@@ -163,7 +159,7 @@ else{
     </div>
     <br>
     <br>
-    <div class ="text-center fixed-top  mt-2"><h4><a href="lb.php" target="_blank" style="color:#fff;">LeaderBoard</a></h4></div>
+    <div class ="text-center fixed-top  mt-2"><h2><a href="lb.php" target="_blank" style="color:#fff;">LeaderBoard</a></h2></div>
 
     <div class="fixed-bottom text-center ">
 
@@ -215,9 +211,9 @@ else{
   <div class="modal fade" id="nqs" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-        <div class="modal-header bg-success">
+        <div class="modal-header "style="background: #b3ffb3">
                    <h2 class="modal-title pl-4 pt-2" id="exampleModalCenterTitle" style="width:100px;height:100px;position:relative; color:#eee;"><i class="fas fa-check pl-4 pt-2 display-4"></i></h2>
-          <h2 class="pt-4 pl-3" style="position:relative;color:#fff">Success !</h2>
+          <h2 class="pt-4 pl-3" style="position:relative;color: #008000">Success !</h2>
 
 
 
@@ -252,15 +248,15 @@ else{
   <div class="modal fade" id="ankit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-        <div class="modal-header bg-danger">
+        <div class="modal-header" style="background:#ff8566">
           <h2 class="modal-title pl-4 pt-2" id="exampleModalCenterTitle" style="width:100px;height:100px;position:relative; color:#eee;"><i class="fas fa-times pl-4 pt-2 display-4"></i></h2>
-          <h2 class="pt-4 pl-3" style="position:relative;color:#fff">Wrong !</h2>
+          <h2 class="pt-4 pl-3" style="position:relative;color:#b32400">Wrong !</h2>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span style="color:#fff;" aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <h4 class="text-center" style="color:#000;">
+          <h4 class="text-center" style="color:#b32400;">
 Try Again!
           </h4>
         </div>
