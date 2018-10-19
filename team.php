@@ -1,253 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <?php include("frontend/seo.php")?>
-    <title>Cryptx | Team</title>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+body{
+margin:0;
+padding:0;
+    font-family: 'Open Sans', sans-serif;
+background: #ffcccc;
     
+}
+.wrapper{
+width:100%;
+    min-height:100px;
+background: #262626;
+position: absolute;
+top:50%;
+transform: translateY(-50%);
+}
+.column
+{
+position: relative;
+width:20%;
+height: 360px;
+    float:left;
+overflow: hidden;
+}
+.column .imgBx
+{
+position:relative;
+}
+.column .imgBx img{
+    max-width: 100%;
+    transition : 1s;
+}
+.column:hover .imgBx img
+{
+    max-width: 100%;
+transition: 1s;
+}
+.column .details{
+position: absolute;
+top:10px;
+left:10px;
+right:10px;
+bottom:10px;
+background: #fff;
+    text-align: center;
+transform: scale(.5);
+visibility: hidden;
+transition: .5s;
+}
+.column:hover .details
+{
+transform: scale(1);
+visibility: visible;
+}
+.column .details .content{
+position: absolute;
+top: 50%;
+left:50%;
+transform: translate(-50%,-50%);
+width: 100%;
+    box-sizing: border-box;
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"> -->
-    <!-- </script> -->
-    <style>
-    @font-face {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 300;
-    src: local("Open Sans Light"), local("OpenSans-Light"), url("https://fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp4mXoaTegdm0LZdjqr5-oayXSOefg.woff2") format("woff2"), url("https://fonts.gstatic.com/s/opensans/v10/DXI1ORHCpsQm3Vp4mXoaTXhCUOGz7vYGh480lGh-uXM.woff") format("woff");
 }
-@font-face {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 400;
-    src: local("Open Sans"), local("OpenSans"), url("https://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2") format("woff2"), url("https://fonts.gstatic.com/s/opensans/v10/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff") format("woff");
+.column .details .content h1{
+position: relative;
+margin: 0;
+padding:0;
+    font-size: 20px;
+color:#262626;
+    text-transform: uppercase;
 }
-@font-face {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 400;
-    src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url("https://fonts.gstatic.com/s/opensans/v10/MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2") format("woff2"), url("https://fonts.gstatic.com/s/opensans/v10/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh480lGh-uXM.woff") format("woff");
+.column .details .content h1 span{
+    font-size:16px;
+color: #999;
 }
-@font-face {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 700;
-    src: local("Open Sans Bold"), local("OpenSans-Bold"), url("https://fonts.gstatic.com/s/opensans/v10/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2") format("woff2"), url("https://fonts.gstatic.com/s/opensans/v10/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh480lGh-uXM.woff") format("woff");
+.column .details .content h1::before{
+content: '';
+position: absolute;
+bottom:-10px;
+width: 50px;
+height:2px;
+background:#f00;
+left:50%;
+transform: translateX(-50%);
+}
+.column .details .content ul{
+position: relative;
+display: flex;
+padding: 0;
+width: 70%;
+margin: 30px auto 0;
+transform: translateY(100px);
+opacity: 0;
+transition: .5s;
+}
+.column:hover .details .content ul
+{
+opacity: 1;
+transform:translateY(0px);
 }
 
-body {
-	font-family: "Open Sans";
-	line-height: 24px;
-}
-h1, h2, h3, h4, h5, h4 {
-	font-family: "Open Sans";
-	font-weight: 300;
-}
-h1 {
-	font-size: 44px;
-}
-h2 {
-	font-size: 44px;
-}
-h3 {
-	font-size: 32px;
-}
-h4 {
-	font-size: 24px;
-}
-h5 {
-	font-size: 22px;
-	line-height: 30px;
-}
-h4 {
-	font-size: 20px;
-}
-.section {
-	color: #5c4144;
-}
-.hr.invisible_hr {
-    height: 0;
-    padding: 0;
-}
-.hr.big_size_hr {
-    margin: 30px 0;
-}
-.hr {
-    clear: both;
-    display: block;
-    font-size: 0;
-    height: 24px;
-    margin: 20px 0;
-    overflow: hidden;
-    padding: 2px 0;
-    position: relative;
+.column .details .content ul li{
+    list-style: none;
+width: 25%;
     text-align: center;
-    width: 100%;
 }
-.highlight_secondary {
-    color: #F24044;
+.column .details .content ul li a{
+display: block;
+color: #262626;
+width: 36px;
+height: 36px;
+    line-height: 36px;
+    border-radius: 50%;
+    box-sizing: border-box;
+border: 1px solid #262626;
 }
-.team-role {
-    color: #A4A7AA;
+.column .details .content ul li a:hover{
+background: #f00;
+color:#fff;
+border: 1px solid #f00;
 }
-    </style>
+.heading
+{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+color: #ff3333;
+    margin-bottom: 20px;
+}
+
+
+</style>
 </head>
 <body>
-    
-<section id="team" class="text-center section">
-  <div class="container">
-    <h2><span class="highlight_secondary">CryptX</span> Team</h2>
+<div class="heading">
+<h1> OUR TEAM</h1>
 
-    <h5>"Alone we can do so little, together we can do so much."
-    </h5>
+</div>
+<div class="wrapper">
+<div class = "column">
+<div class= "imgBx">
+<img src="avik.jpg">
+</div>
+<div class="details">
+<div class="content">
+<h1>Avik Pandey<br><span>Organiser</span></h1>
+<ul>
+<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
 
-    <div class="hr big_size_hr invisible_hr">
-        <i class="fa fa-"></i>
-    </div>
+</ul>
+</div>
 
-    <div class="row">
-      <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
-        <div class="team">
-          <div class="team-image">
-            <a href="#">
-              <img src="team_m/Sarthak_sadh.jpg" class="img-circle img-responsive">
-            </a>
-          </div><!-- /.team-image -->
-          <div class="team-content">
-            <div class="team-name"><a href="#"><h5>Sarthak Sadh</h5></a></div>
-            <div class="team-role">Organiser | Web Developer</div>
-            <a href="tel:8076911425">Contact</a>
-            <div class="team-description">8076911425</div>
-          </div><!-- /.team-content -->
-        </div><!-- /.team -->
-      </div>
-      <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
-        <div class="team">
-          <div class="team-image">
-            <a href="#">
-              <img src="team_m/Ankit_Jain.jpg" class="img-circle img-responsive">
-            </a>
-          </div><!-- /.team-image -->
-          <div class="team-content">
-            <div class="team-name"><a href="#"><h5>Ankit Jain</h5></a></div>
-            <div class="team-role">Organiser | Web Developer</div>
-            <a href="tel:8650605941">Contact</a>
-            <div class="team-description">8650605941</div>
-          </div><!-- /.team-content -->
-        </div><!-- /.team -->
-      </div>
-     
-            
+</div>
+</div>
+<div class = "column">
+<div class= "imgBx">
+<img src="avik.jpg">
+</div>
+<div class="details">
+<div class="content">
+<h1>Bhanuja Aggarwal <br><span>Organiser</span></h1>
+<ul>
+<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
 
-    <div class="hr invisible_hr">
-        <i class="fa fa-"></i>
-    </div>
+</ul>
+</div>
 
-    <div class="row">
-      <div class="col-md-4 col-sm-4 col-xs-4"><!-- add col-md-offset-1 for 5 members -->
-        <div class="team">
-          <div class="team-image">
-            <a href="#">
-              <img src="team_m/Anisha.jpg" class="img-circle img-responsive">
-            </a>
-           
-          </div><!-- /.team-image -->
-          <div class="team-content">
-            <div class="team-name"><h5>Anisha Jindal</h5></div>
-            <div class="team-role">Team Member</div>
-            <div class="team-description"></div>
-          </div><!-- /.team-content -->
-        </div><!-- /.team -->
-      </div>
-      <div class="col-md-4 col-sm-4 col-xs-4">
-        <div class="team">
-          <div class="team-image">
-            <a href="#">
-              <img src="team_m/Sejal_Bhatia.jpg" class="img-circle img-responsive">
-            </a>
-          </div><!-- /.team-image -->
-          <div class="team-content">
-            <div class="team-name"><h5>Sejal Bhatia</h5></div>
-            <div class="team-role">Team Member</div>
-            <div class="team-description"></div>
-          </div><!-- /.team-content -->
-        </div><!-- /.team -->
-      </div>
-      <div class="col-md-4 col-sm-4 col-xs-4">
-        <div class="team">
-          <div class="team-image">
-            <a href="#">
-              <img src="team_m/Shradha.jpg" class="img-circle img-responsive">
-            </a>
-          </div><!-- /.team-image -->
-          <div class="team-content">
-            <div class="team-name"><h5>Shradha Dua</h5></div>
-            <div class="team-role">Team Member</div>
-            <div class="team-description"></div>
-          </div><!-- /.team-content -->
-        </div><!-- /.team -->
-      </div>
-      <div class="col-md-4 col-sm-4 col-xs-4">
-        <div class="team">
-          <div class="team-image">
-            <a href="#">
-              <img src="team_m/Abhi_Monga.jpg" class="img-circle img-responsive">
-            </a>
+</div>
+</div>
+<div class = "column">
+<div class= "imgBx">
+<img src="avik.jpg">
+</div>
+<div class="details">
+<div class="content">
+<h1>Lakshya Kriti<br><span>Organiser</span></h1>
+<ul>
+<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
 
-          </div><!-- /.team-image -->
-          <div class="team-content">
-            <div class="team-name"><h5>Abhinav Monga</h5></div>
-            <div class="team-role">Team Member</div>
-            <div class="team-description"></div>
-          </div><!-- /.team-content -->
-        </div><!-- /.team -->
-      </div>
-      <div class="col-md-4 col-sm-4 col-xs-4">
-        <div class="team">
-          <div class="team-image">
-            <a href="#">
-              <img src="team_m/Pankaj.jpg" class="img-circle img-responsive">
-            </a>
-           
-          </div><!-- /.team-image -->
-          <div class="team-content">
-            <div class="team-name"><h5>Pankaj Kaushik</h5></div>
-            <div class="team-role">Team Member</div>
-            <div class="team-description"></div>
-          </div><!-- /.team-content -->
-        </div><!-- /.team -->
-      </div>
-      <div class="col-md-4 col-sm-4 col-xs-4">
-        <div class="team">
-          <div class="team-image">
-            <a href="#">
-              <img src="team_m/Omisha.jpg" class="img-circle img-responsive">
-            </a>
-            <div class="team-links">
-              <div class="team-links-list">
-                <a href="#" target="_blank"><i class="fa fa-envelope"></i></a>
-                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                <a href="#" target="_blank"><i class="fa fa-linked"></i></a>
-                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-              </div><!-- /.team-links-list -->
-            </div><!-- /.team-links -->
-          </div><!-- /.team-image -->
-          <div class="team-content">
-            <div class="team-name"><h5>Omisha</h5></div>
-            <div class="team-role">Team Member</div>
-            <div class="team-description"></div>
-          </div><!-- /.team-content -->
-        </div><!-- /.team -->
-      </div>
-    </div>
+</ul>
+</div>
+</div>
+</div>
+<div class = "column">
+<div class= "imgBx">
+<img src="avik.jpg">
+</div>
+<div class="details">
+<div class="content">
+<h1>Sarthak Sadh<br><span>Developer</span></h1>
+<ul>
+<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
 
-    <div class="hr big_size_hr invisible_hr">
-        <i class="fa fa-"></i>
-    </div>
+</ul>
+</div>
 
-  </div><!-- /.container -->
-</section>
+</div>
+</div>
+<div class = "column">
+<div class= "imgBx">
+<img src="avik.jpg">
+</div>
+<div class="details">
+<div class="content">
+<h1>Pankaj Kaushik<br><span>Developer</span></h1>
+<ul>
+<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
+
+</ul>
+</div>
+
+</div>
+</div>
+</div>
 </body>
 </html>
+
